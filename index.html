@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Heading</h1>
+        <nav data-current="aboutMe">
+                <button onclick="clicked('aboutMeButton')" id="aboutMeButton" class="selectedButton" data-ref="aboutMe">About Me</button>
+                <button onclick="clicked('learnToLearnButton')" id="learnToLearnButton" class="" data-ref="learningToLearn">Learning to Learn</button>
+                <button onclick="clicked('goalSettingButton')" id="goalSettingButton" class="" data-ref="goalSetting">Goal Setting</button>
+                <button onclick="clicked('meetupsButton')" id="meetupsButton" class="" data-ref="meetups">Meetups</button>
+        </nav>
+    </header>
+    
+    <main  data-currentSection = "aboutMe">
+
+        <section class="hidden page" id="learnToLearn">
+            <h2>Learning to Learn</h2>
+        </section>
+
+        <section class="hidden page" id="goalSetting">
+            <h2>Goal Setting</h2>
+        </section>
+
+        <section class="hidden page" id="meetups">
+            <h2>Meetups</h2>
+        </section>
+
+        <section class="page" id="aboutMe">
+            <h2>About Me</h2>
+            <img src="img/Michael-Coons.png" width="150px" height="150px" alt="">
+        </section>
+
+        <section class="mainBackground page-wrap">
+        </section>
+
+    </main>
+
+    <footer>
+            &copy; Copyright 2018 - Michael Coons
+    </footer>
+
+    <script>
+        function clicked(clickedId){
+            console.log("ID=" + clickedId);
+            document.getElementById('aboutMeButton').classList.remove('selectedButton');
+            document.getElementById('learnToLearnButton').classList.remove('selectedButton');
+            document.getElementById('goalSettingButton').classList.remove('selectedButton');
+            document.getElementById('meetupsButton').classList.remove('selectedButton');
+
+            document.getElementById(clickedId).classList.add('selectedButton');
+
+            var newElement = clickedId.toString().replace("Button","");
+
+            console.log("new ID:" + newElement);
+
+            document.getElementById('aboutMe').classList.add('hidden');
+            document.getElementById('learnToLearn').classList.add('hidden');
+            document.getElementById('goalSetting').classList.add('hidden');
+            document.getElementById('meetups').classList.add('hidden');
+
+            document.getElementById(newElement).classList.remove('hidden');
+
+            // this.classList.add('selectedButton');
+            // console.log(x);
+        }
+    </script>
+
+</body>
+</html>
