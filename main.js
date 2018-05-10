@@ -1,23 +1,21 @@
 function clicked(clickedId){
-    console.log("ID=" + clickedId);
-    document.getElementById('aboutMeButton').classList.remove('selectedButton');
-    document.getElementById('learnToLearnButton').classList.remove('selectedButton');
-    document.getElementById('goalSettingButton').classList.remove('selectedButton');
-    document.getElementById('meetupsButton').classList.remove('selectedButton');
 
+    var buttons = Array.from( document.getElementsByClassName('navButton') );
+    buttons.forEach ( button => button.classList.remove('selectedButton') );
     document.getElementById(clickedId).classList.add('selectedButton');
 
-    var newElement = clickedId.toString().replace("Button","");
+    var activePage = clickedId.toString().replace("Button","");
 
-    console.log("new ID:" + newElement);
-
-    document.getElementById('aboutMe').classList.add('hidden');
-    document.getElementById('learnToLearn').classList.add('hidden');
-    document.getElementById('goalSetting').classList.add('hidden');
-    document.getElementById('meetups').classList.add('hidden');
-
-    document.getElementById(newElement).classList.remove('hidden');
-
-    // this.classList.add('selectedButton');
-    // console.log(x);
+    var pages = Array.from( document.getElementsByClassName('page') );
+    pages.forEach( page => page.classList.add('hidden') );
+    document.getElementById(activePage).classList.remove('hidden');
+    
 }
+
+// function calculateHeight()
+// {
+//     var h = document.getElementById("aboutMe").offsetHeight + 20;
+//     console.log("AboutMe Height = "+ document.getElementById("aboutMe").offsetHeight);
+
+//     document.getElementById("mainBackground").style.height = (h + "px");
+// }

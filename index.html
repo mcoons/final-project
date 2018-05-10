@@ -1,78 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
-    <title>Document</title>
-</head>
-<body>
 
-    <header>
-        <h1>Heading</h1>
-        <nav data-current="aboutMe">
-                <button onclick="clicked('aboutMeButton')" id="aboutMeButton" class="selectedButton" data-ref="aboutMe">About Me</button>
-                <button onclick="clicked('learnToLearnButton')" id="learnToLearnButton" class="" data-ref="learningToLearn">Learning to Learn</button>
-                <button onclick="clicked('goalSettingButton')" id="goalSettingButton" class="" data-ref="goalSetting">Goal Setting</button>
-                <button onclick="clicked('meetupsButton')" id="meetupsButton" class="" data-ref="meetups">Meetups</button>
-        </nav>
-    </header>
-    
-    <main  data-currentSection = "aboutMe">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
 
-        <section class="hidden page" id="learnToLearn">
-            <h2>Learning to Learn</h2>
-        </section>
+        <title>Michael's Blog</title>
+    </head>
 
-        <section class="hidden page" id="goalSetting">
-            <h2>Goal Setting</h2>
-        </section>
+    <body>
 
-        <section class="hidden page" id="meetups">
-            <h2>Meetups</h2>
-        </section>
+        <header>
+            <div class="outerHeader">
+                <div class="headerSection">
+                    <h1 class="mainHeading">Michael's Blog</h1>
 
-        <section class="page" id="aboutMe">
-            <h2>About Me</h2>
-            <img src="img/Michael-Coons.png" width="150px" height="150px" alt="">
-        </section>
+                    <nav>
+                        <button onclick="clicked('aboutMeButton')"      id="aboutMeButton"      class="navButton selectedButton">About Me</button>
+                        <button onclick="clicked('learnToLearnButton')" id="learnToLearnButton" class="navButton">Learning to Learn</button>
+                        <button onclick="clicked('goalSettingButton')"  id="goalSettingButton"  class="navButton">Goal Setting</button>
+                        <button onclick="clicked('meetupsButton')"      id="meetupsButton"      class="navButton">Meetups</button>
+                        <button onclick="clicked('chillinButton')"      id="chillinButton"      class="navButton">Chillin</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="page outerPage" id="aboutMe">
+                <h2>About Me</h2>
 
-        <section class="mainBackground page-wrap">
-        </section>
+                <div class="innerPage">
+                    <article>
+                        <img src="img/Michael-Coons.png" width="150px" height="150px" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In adipisci eligendi voluptatibus maxime dignissimos quasi, sed deserunt velit veniam distinctio et repellat excepturi sequi blanditiis ad alias doloremque maiores itaque!</p>
+                    </article>
+                </div>
+            </section>
 
-    </main>
+            <section class="outerPage hidden page" id="learnToLearn">
+                <h2>Learning to Learn</h2>
 
-    <footer>
-            &copy; Copyright 2018 - Michael Coons
-    </footer>
+                <div class="innerPage">
 
-    <script>
-        function clicked(clickedId){
-            console.log("ID=" + clickedId);
-            document.getElementById('aboutMeButton').classList.remove('selectedButton');
-            document.getElementById('learnToLearnButton').classList.remove('selectedButton');
-            document.getElementById('goalSettingButton').classList.remove('selectedButton');
-            document.getElementById('meetupsButton').classList.remove('selectedButton');
+                    <article>
+                        <h3>Learning CSS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
 
-            document.getElementById(clickedId).classList.add('selectedButton');
+                    <article>
+                        <h3>Learning Flexbox</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
 
-            var newElement = clickedId.toString().replace("Button","");
+                    <article>
+                        <h3>Learning Javascript</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
+                </div>
+            </section>
 
-            console.log("new ID:" + newElement);
+            <section class="outerPage hidden page" id="goalSetting">
 
-            document.getElementById('aboutMe').classList.add('hidden');
-            document.getElementById('learnToLearn').classList.add('hidden');
-            document.getElementById('goalSetting').classList.add('hidden');
-            document.getElementById('meetups').classList.add('hidden');
+                <h2>Goal Setting</h2>
 
-            document.getElementById(newElement).classList.remove('hidden');
+                <div class="innerPage">
 
-            // this.classList.add('selectedButton');
-            // console.log(x);
-        }
-    </script>
+                    <article>
+                        <h3>Article 1 Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
 
-</body>
+                    <article>
+                        <h3>Article 2 Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
+
+                    <article>
+                        <h3>Article 3 Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="outerPage hidden page" id="meetups">
+
+                <h2>Meetups</h2>
+
+                <div class="innerPage">
+
+                    <article>
+                        <h3>Firebase - 10 Minutes to Deployment</h3>
+                        <p>Date: May 2, 2018</p>
+                        <p>Location: Slalom Office, Denver, CO</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur similique illum cumque iure alias nemo ullam, voluptas tempore molestiae quasi. Repellat, hic? Fugit optio quisquam voluptatum assumenda labore. Est.</p>
+                    </article>
+
+                    <article>
+                        <h3>Article 2 Heading</h3>
+                        <p>Date: </p>
+                        <p>Location: </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, labore sunt? Doloribus odio, a architecto debitis, deleniti possimus voluptatem alias, voluptate perspiciatis quaerat id inventore aliquam modi. Obcaecati, ipsam nisi.</p>
+                    </article>
+
+                    <article>
+                        <h3>Article 3 Heading</h3>
+                        <p>Date: </p>
+                        <p>Location: </p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt nemo id in harum? Quia vitae sapiente repellendus optio tempora ad beatae cupiditate sit, quae modi velit sed voluptate soluta numquam.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="outerPage hidden page" id="chillin">
+                
+                <h2>Chillin</h2>
+
+                <div class="innerPage">
+                    <article>
+                        <h3>Hiking</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora ea voluptate culpa dolor et quaerat beatae repellat libero sit maiores esse tenetur corrupti officiis veniam quas velit facere, nisi eligendi!</p>
+                    </article>
+
+                    <article>
+                        <h3>Photography</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda expedita officiis harum, temporibus quos natus officia architecto tempora molestias repellat obcaecati, eveniet nulla quod repellendus ex necessitatibus? Voluptas, quas!</p>
+                    </article>
+
+                    <article>
+                        <h3>Movies</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt blanditiis architecto maxime illo molestias dicta nemo, sequi voluptatum ipsa quisquam commodi, aliquid similique. Eum, non. Aliquid sit cumque neque optio.</p>
+                    </article>
+                </div>
+
+            </section>
+
+            <section class="mainBackground" id="mainBackground">
+
+            </section>
+            
+            <footer>
+                <div class="footerContent">
+                    &copy; Copyright 2018 - Michael Coons - All rights reserved.
+
+<!-- Lorem ipsum dolor s it amet consectetur adipisicing elit. Fuga esse maiores eligendi deleniti sint, libero nobis accusamus deserunt voluptatum nesciunt magnam accusantium sed inventore laudantium? Veritatis esse perspiciatis hic cupiditate! -->
+
+                </div>
+            </footer>
+        </main>
+
+    </body>
+
 </html>
