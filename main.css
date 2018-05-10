@@ -44,7 +44,7 @@ table {
 
 /*************************************************************/
 
-html, body, main, .mainBackground { 
+html { 
     font-family: 'Merienda One', cursive;
 } 
 
@@ -53,7 +53,9 @@ html {
     overflow-y: scroll;
 }
 
-/* main { margin: 0 15px 0 15px; } */
+body {
+    background-color: #B6DBFD;
+};
 
 h1, h2, h3 { margin: 15px 0 25px 0; }
 
@@ -62,8 +64,6 @@ h1 { font-size: 60px; }
 h2 { font-size: 40px; }
 
 h3 { font-size: 30px; }
-
-
 
 article p { 
     font-size: 20px; 
@@ -87,37 +87,30 @@ article p {
     height: 220px;
     height: auto;
     border-radius: 20px;
+    box-shadow: 2px 2px 10px 2px #447777 inset;
+
     
     animation-name: movingHeader;
-    -moz-animation-name: movingHeader;
-    -o-animation-name: movingHeader;
-    -webkit-animation-name: movingHeader;
-
-    animation-duration: 240s;
-    -moz-animation-duration: 240s;
-    -o-animation-duration: 240s;
-    -webkit-animation-duration: 240s;
-    
+    animation-duration: 180s;
     animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    
     animation-direction: normal;
-    -moz-animation-direction: normal;
-    -o-animation-direction: normal;
-    -webkit-animation-direction: normal;
-
     animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
  }
 
 .mainHeading {
     text-align: center;
+    color: rgb(90, 147, 228);
+    /* color: white; */
     margin: 30px 0 90px 0;
-    text-shadow: 7px 0px 7px white, -7px 0px 7px white, 0px 7px 7px white, 0px -7px 7px white;
+    
+    text-shadow: -1px -1px 0 #000,
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000,
+                  7px  0px 7px white, 
+                 -7px  0px 7px white,     
+                  0px  7px 7px white, 
+                  0px -7px 7px white;
 }
 
 .headerSection nav {
@@ -125,7 +118,6 @@ article p {
     flex-wrap: wrap;
 }
 
-/* .headerSection nav button { */
 .navButton {
     font-size: 20px;
     color: red;
@@ -143,7 +135,6 @@ article p {
 .selectedButton{
     color: green;
     background: linear-gradient(white, rgb(60, 206, 250));
-    /* font-size: 25px; */
 }
 
 .headerSection nav button:focus {
@@ -164,16 +155,18 @@ article p {
     margin: 10px 15px 10px 15px;
     border-radius: 20px;
     background-color:#e6f2ff;
-    box-shadow: 2px 2px 10px 2px #447777;
+    background: linear-gradient(to bottom right, #e6f2ff, #bcd4ee);
 
+    box-shadow: 2px 2px 10px 2px #447777;
 }
+
 .outerPage {
     padding: 20px;
     margin: 10px 15px 80px 15px;
     border-radius: 20px;
     background-color:#e6f2ff;
+    background: linear-gradient(to bottom right, #e6f2ff, #bcd4ee);
     box-shadow: 2px 2px 10px 2px #447777;
-
 }
 
 .innerPage {
@@ -181,7 +174,9 @@ article p {
     margin: 10px 15px 10px 15px;
     border-radius: 20px;
     box-shadow: 2px 2px 10px 2px #447777 inset;
-    background-color:#e6f2ff;
+    background-color:#d6e7f8;
+    background: linear-gradient(to bottom right,#bcd4ee, #e6f2ff);
+
 }
 
 .hidden {
@@ -211,11 +206,11 @@ footer {
     overflow: hidden;
 }
 
-
 @media (max-width: 420px) {
     h1 { font-size: 40px; }
     h2 { font-size: 30px; }
     h3 { font-size: 20px; }
     .navButton { font-size: 15px; }
     #aboutMe img { width: 100px; height: 100px;}
+    article p { font-size: 15px; }
 }

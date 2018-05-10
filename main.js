@@ -11,11 +11,3 @@ function clicked(clickedId){
     document.getElementById(activePage).classList.remove('hidden');
     
 }
-
-// function calculateHeight()
-// {
-//     var h = document.getElementById("aboutMe").offsetHeight + 20;
-//     console.log("AboutMe Height = "+ document.getElementById("aboutMe").offsetHeight);
-
-//     document.getElementById("mainBackground").style.height = (h + "px");
-// }
