@@ -57,10 +57,7 @@ h1, h2, h3, h4 { margin: 15px 0 25px 0; }
 
 h1 { font-size: 60px; }
 
-h2 {
-    font-size: 45px; 
-    font-weight: bold;
-}
+h2 { font-size: 45px; }
 
 h3 { 
     font-size: 30px; 
@@ -118,7 +115,7 @@ article p {
 }
 
 .headerSection nav {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -160,7 +157,13 @@ article p {
 }
 
 .pageHeading {
-    text-shadow: 2px 2px 5px #447777;
+    color: rgb(90, 147, 228);
+    text-shadow: 
+        -1px -1px 0   #000,
+         1px -1px 0   #000,
+        -1px  1px 0   #000,
+         1px  1px 0   #000,
+         3px  3px 5px #447777;
 }
 .outerHeader {
     padding: 20px;
